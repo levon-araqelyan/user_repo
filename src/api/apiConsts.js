@@ -1,4 +1,4 @@
 export const apiCollections = {
   data: "data",
-  api: "api",
+  api: "api"
 };

@@ -1,0 +1,23 @@
+.headerButtonsDiv {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.headerButtons {
+    width: 150px;
+    height: 40px;
+    background-color: red;
+    border: none;
+    margin-right: 10px;
+    cursor: pointer;
+    color: darkgreen;
+}
+
+.headerButtons:hover {
+    background-color: #0074D9;
+}
+
+.headerButtons:focus {
+    outline: none;
+}

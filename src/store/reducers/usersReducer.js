@@ -1,5 +1,10 @@
+import { List, Map } from "immutable";
 import { USERS_ACTION_TYPES } from "../actions/usersActions";
 import { clearList } from "../actions/clearList";
+
+const x = Map({ l: 30, g: 31 }).toObject();
+const y = x;
+console.log(x === y);
 
 const initialState = {
   users: {

@@ -4,6 +4,7 @@ import { request } from "../services/requestService";
 import { USERS_ACTION_TYPES } from "../store/actions/usersActions";
 
 export function* getUsers({ payload }) {
+
   try {
     const { searchedUsers, page } = payload;
     const { data } = yield call(request, "GET", `https://api.github.com/search/users?q=${searchedUsers}+in&per_page=20&page=${page}`, {});
@@ -15,6 +16,7 @@ export function* getUsers({ payload }) {
 }
 
 function* getSingleUser(action) {
+
   try {
     const { login } = action.payload;
     const { data } = yield call(request, "GET", `https://api.github.com/users/${login}`, {});

@@ -1,0 +1,9 @@
+.wrap{
+    display: flex;
+    padding: 10px 20px;
+    background: cornflowerblue;
+}
+
+.search{
+    margin-right: 20px;
+}

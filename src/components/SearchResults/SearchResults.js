@@ -24,7 +24,7 @@ class SearchResults extends React.PureComponent {
         {list.items.map((eachUser, index) => (
           <div tabIndex={index} role="button" key={eachUser.id} className={styles.eachUsr} onClick={() => this.singlPage(eachUser, index)}>
             <img src={flags ? eachUser.owner.avatar_url : eachUser.avatar_url} alt="" />
-            <p>{flags ? eachUser.owner.login : eachUser.login}</p>
+            <p className={styles.name}>{flags ? eachUser.owner.login : eachUser.login}</p>
           </div>
         ))}
       </div>

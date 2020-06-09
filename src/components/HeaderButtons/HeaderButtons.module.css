@@ -2,20 +2,25 @@
     width: 100%;
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: blue;
+    height: 100px;
 }
 
 .headerButtons {
     width: 150px;
     height: 40px;
-    background-color: red;
+    background-color: green;
     border: none;
     margin-right: 10px;
     cursor: pointer;
-    color: darkgreen;
+    color: white;
+    font-size: 20px;
 }
 
 .headerButtons:hover {
-    background-color: #0074D9;
+    background-color: darkgreen;
 }
 
 .headerButtons:focus {

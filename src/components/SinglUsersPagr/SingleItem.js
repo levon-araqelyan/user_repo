@@ -5,6 +5,9 @@ import { connect } from "react-redux";
 import { getSinglUsersRequest } from "../../store/action-creaters/usersActionsCreator";
 import { getSinglReposRequest } from "../../store/action-creaters/reposActionCreator";
 import { getParamsFromUrl } from "../../services/getParamsFromUrl";
+import { navigationService } from "../../services/navigationService";
+import styles from "./SingleItem.module.css"
+import Button from "../Button";
 
 function SingleItem({ getFromUsers, login, avatarUrl, id, bio, name, getSinglUsersRequestActionCreator, getSinglReposRequestActionCreator }) {
   useEffect(() => {
@@ -15,15 +18,18 @@ function SingleItem({ getFromUsers, login, avatarUrl, id, bio, name, getSinglUse
     } else {
       getSinglReposRequestActionCreator(getBy);
     }
-  }, []);
+  }, [getFromUsers, getSinglReposRequestActionCreator, getSinglUsersRequestActionCreator]);
 
   return (
-    <div>
-      <img src={avatarUrl} alt="#" />
-      <p>{`login : ${login}`}</p>
-      <p>{`id: ${id}`}</p>
-      {bio && <p>{`bio : ${bio}`}</p>}
-      <p>{`name : ${name}`}</p>
+    <div className={styles.wrap}>
+      <Button className={styles.button} type="button" onClick={() => navigationService.hisory.goBack()}>back</Button>
+      <div className={styles.cardUser}>
+        <img src={avatarUrl} alt="#" />
+        <p>{`login : ${login}`}</p>
+        <p>{`id: ${id}`}</p>
+        {bio && <p>{`bio : ${bio}`}</p>}
+        <p>{`name : ${name}`}</p>
+      </div>
     </div>
   );
 }

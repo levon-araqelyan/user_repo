@@ -34,6 +34,14 @@
     ]
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^5.3.18",
+    "@storybook/addon-backgrounds": "^5.3.18",
+    "@storybook/addon-docs": "^5.3.18",
+    "@storybook/addon-links": "^5.3.18",
+    "@storybook/addon-viewport": "^5.3.18",
+    "@storybook/addons": "^5.3.18",
+    "@storybook/preset-create-react-app": "^2.1.1",
+    "@storybook/react": "^5.3.18",
     "@babel/core": "^7.4.4",
     "@babel/plugin-proposal-class-properties": "^7.4.4",
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
@@ -81,6 +89,7 @@
     "url-loader": "^1.1.2"
   },
   "scripts": {
+    "storybook": "start-storybook -p 9009 -s public",
     "start": "webpack-dev-server --config ./webpack.config.dev.js --http",
     "build": "webpack --config webpack.config.prod.js",
     "test": "jest --setupFiles dotenv/config --coverage --testResultsProcessor=jest-teamcity-reporter --collectCoverageFrom=src/**",

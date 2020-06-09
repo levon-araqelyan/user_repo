@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import Button from "../Button";
 import { navigationService } from "../../services/navigationService";
 import Pagination from "../Pagination/Pagination";
+import styles from "./SearchInput.module.css"
 
 class SearchInput extends React.Component {
   constructor(props) {
@@ -71,8 +72,8 @@ class SearchInput extends React.Component {
     const { value, page } = this.state;
     const { users, repos, flags } = this.props;
     return (
-      <div>
-        <div>
+      <div className={styles.wrap}>
+        <div className={styles.search}>
           <input value={value} onChange={this.handleChange} />
           <Button onClick={this.searchItems}>Search</Button>
         </div>

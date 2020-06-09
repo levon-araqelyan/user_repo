@@ -1,0 +1,28 @@
+.wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.cardUser{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 10px;
+    background: cadetblue;
+}
+
+.cardUser img{
+    width: 100%;
+}
+
+.button{
+    background: #0074D9;
+    margin-right: 50px;
+    height: 50px;
+    width: 100px;
+    border-radius: 30%;
+    cursor: pointer;
+
+}
